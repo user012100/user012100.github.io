@@ -7,7 +7,7 @@
 h1 {
 	color: #000000;
 	font-weight: 700;
-	font-size: 21vw;
+	font-size: 10rem;
 	display: flex;
 	justify-content: center;
 	margin-block-start: 1vh;
@@ -17,10 +17,10 @@ h1 {
 ol {
 	color: #CECED7;
 	font-weight: 600;
-	font-size: 7vw;
+	font-size: 4rem;
 	display: flex;
 	flex-direction: column;
-	gap: 3vh;
+	gap: 3rem;
 	align-items: center;
 }
 
