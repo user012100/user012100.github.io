@@ -1,0 +1,29 @@
+:root {
+	background-color: #EA3423;
+	font-family: Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+
+h1 {
+	color: #000000;
+	font-weight: 700;
+	font-size: 21vw;
+	display: flex;
+	justify-content: center;
+	margin-block-start: 1vh;
+	margin-block-end: 25vh;
+}
+
+ol {
+	color: #CECED7;
+	font-weight: 600;
+	font-size: 7vw;
+	display: flex;
+	flex-direction: column;
+	gap: 3vh;
+	align-items: center;
+}
+
+a:hover {
+	color: #000000;
+}
