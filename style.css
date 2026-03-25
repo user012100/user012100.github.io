@@ -4,24 +4,49 @@
 	text-transform: uppercase;
 }
 
+main {
+	text-align: center;
+	padding: 0.5rem;
+}
+
 h1 {
 	color: #000000;
 	font-weight: 700;
-	font-size: 10rem;
+	font-size: 7rem;
 	display: flex;
 	justify-content: center;
-	margin-block-start: 1vh;
-	margin-block-end: 25vh;
+	margin-block-start: 3rem;
+	margin-block-end: 5rem;
 }
 
 ol {
 	color: #CECED7;
 	font-weight: 600;
-	font-size: 4rem;
+	font-size: 1.75rem;
 	display: flex;
 	flex-direction: column;
 	gap: 3rem;
+}
+
+li {
+	display: flex;
+	flex-direction: column;
 	align-items: center;
+	gap: 1rem;
+}
+
+p {
+	font-weight: 400;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	color: #000000;
+	text-transform: none;
+}
+
+@media (width > 600px) {
+	ol {
+		font-size: 4rem;
+	}
 }
 
 a:hover {
