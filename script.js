@@ -1,19 +1,16 @@
 var buttons = document.querySelectorAll('button')
+var descriptions = document.querySelectorAll('.description')
 
-for (var i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', function() {
-        var desc = this.nextElementSibling
-        var isOpen = desc.classList.contains('open')
+for (let i = 0; i < buttons.length; i++) {
+	buttons[i].addEventListener('click', () => {
+		var isOpen = descriptions[i].classList.contains('open')
+		// console.log(isOpen)
+		for (var a = 0; a < descriptions.length; a++) {
+			descriptions[a].classList.remove('open')
+		}
 
-        // close all
-        for (var a = 0; a < buttons.length; a++) {
-            buttons[a].nextElementSibling.classList.remove('open')
-        }
-
-        // open this one only if it wasn't already open
-        if (!isOpen) {
-            desc.classList.add('open')
-            this.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        }
-    })
+		if (!isOpen) {
+			descriptions[i].classList.add('open')
+		}
+	})
 }

@@ -1,17 +1,32 @@
 :root {
 	--color-background: #EA3423;
 	--color-text: #000000;
-	--color-accent: #CECED7;
-	--color-heading: #FFD700;
+	--color-links: #CECED7;
+	--color-accent: #FFD700;
 
+	--padding-xsmall: 0.5rem;
 	--padding-small: 1rem;
 	--padding-medium: 2rem;
-	--footer-height: 4rem;
+	--padding-large: 6rem;
+	--footer-height: 5rem;
 
 	--font-size-h1: 2.25rem;
 	--font-size-h2: 1.25rem;
 	--font-size-list: 1.5rem;
+	--font-size-footer: 1.25rem;
 	--font-size-description: 1rem;
+
+	--image-max-height: 8rem;
+	--description-indent: 10rem;
+
+	--font-family-description: Georgia, 'Times New Roman', serif;
+
+	--font-weight-normal: 400;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+
+	--line-height-body: 1.5;
+	--description-max-height: 30rem;
 
 	background-color: var(--color-background);
 	font-family: Helvetica, Arial, sans-serif;
@@ -28,8 +43,8 @@ main {
 }
 
 h1, h2 {
-	color: var(--color-heading);
-	font-weight: 700;
+	color: var(--color-accent);
+	font-weight: var(--font-weight-bold);
 	text-align: center;
 	padding: var(--padding-small);
 }
@@ -46,8 +61,8 @@ h2 {
 }
 
 ol {
-	color: var(--color-accent);
-	font-weight: 600;
+	color: var(--color-links);
+	font-weight: var(--font-weight-semibold);
 	font-size: var(--font-size-list);
 	display: flex;
 	flex-direction: column;
@@ -66,14 +81,11 @@ button {
 	background: none;
 	border: none;
 	cursor: pointer;
-	font: inherit;
-	color: inherit;
-	text-transform: inherit;
 }
 
 button:hover,
 button:active {
-	color: var(--color-heading);
+	color: var(--color-accent);
 }
 
 p {
@@ -81,9 +93,9 @@ p {
 	margin: 0 auto;
 	padding-block: var(--padding-medium);
 	padding-inline: 0;
-	font-weight: 400;
+	font-weight: var(--font-weight-normal);
 	font-size: var(--font-size-description);
-	line-height: 1.5;
+	line-height: var(--line-height-body);
 	color: var(--color-text);
 	text-transform: none;
 	text-align: left;
@@ -101,21 +113,24 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	padding: var(--padding-small);
+	pointer-events: none;
+	background-color: var(--color-background);
 }
 
 footer a {
-	color: var(--color-accent);
+	pointer-events: all;
+	color: var(--color-text);
 	text-decoration: none;
-	font-weight: 600;
-	font-size: var(--font-size-description);
+	font-weight: var(--font-weight-semibold);
+	font-size: var(--font-size-footer);
 }
 
 footer a:hover {
-	color: var(--color-heading);
+	color: var(--color-accent);
 }
 
 .description {
-	background-color: var(--color-accent);
+	background-color: var(--color-links);
 	overflow: hidden;
 	max-height: 0;
 	transition: max-height 0.5s ease, padding-block 0.5s ease;
@@ -125,38 +140,84 @@ footer a:hover {
 	gap: var(--padding-medium);
 	padding-inline: var(--padding-medium);
 	text-decoration: none;
-	color: inherit;
 }
 
 .description img {
 	width: auto;
 	object-fit: cover;
 	flex-shrink: 0;
-	max-height: 8rem;
+	max-height: var(--image-max-height);
 }
 
 .open {
-	max-height: 500px;
+	max-height: var(--description-max-height);
 }
 
-li:nth-child(1) .description { 
-	background-color: #ffffff; 
+.description p {
+	margin: 0;
+	font-family: var(--font-family-description);
+	font-size: var(--font-size-description);
+	color: var(--color-text);
 }
 
-li:nth-child(2) .description { 
-	background-color: #F799BF; 
+#persistence-of-memory .description p,
+#thoughts-on-interaction-of-color .description p {
+	color: var(--color-links);
 }
 
-li:nth-child(3) .description { 
-	background-color: #4E5DB3; 
+#persistence-of-memory .description:hover p,
+#thoughts-on-interaction-of-color .description:hover p {
+	color: var(--color-text);
 }
 
-li:nth-child(4) .description { 
-	background-color: #BEBEBE; 
+#untold .description {
+	background-color: #ffffff;
 }
 
-li:nth-child(5) .description { 
-	background-color: #C71912; 
+#gossip .description {
+	background-color: #F799BF;
+}
+
+#persistence-of-memory .description {
+	background-color: #4E5DB3;
+}
+
+#cult-of-the-ugly .description {
+	background-color: #BEBEBE;
+}
+
+#thoughts-on-interaction-of-color .description {
+	background-color: #C71912;
+}
+
+#untold-click-text, #gossip-click-text, #cult-click-text {
+	color: var(--color-background);
+}
+
+#persistence-click-text, #thoughts-click-text {
+	color: var(--color-text);
+}
+
+#untold .description:hover,
+#gossip .description:hover,
+#persistence-of-memory .description:hover,
+#cult-of-the-ugly .description:hover,
+#thoughts-on-interaction-of-color .description:hover {
+	background-color: var(--color-accent);
+}
+
+.about-button {
+	display: inline;
+	padding: 0;
+	color: var(--color-accent);
+	font-size: var(--font-size-h2);
+	font-weight: var(--font-weight-bold);
+	margin-block-end: var(--padding-small);
+}
+
+.about-button:hover,
+.about-button:active {
+	color: var(--color-text);
 }
 
 @media (width > 600px) {
@@ -164,21 +225,25 @@ li:nth-child(5) .description {
 		--font-size-h1: 4rem;
 		--font-size-h2: 2rem;
 		--font-size-list: 2rem;
+		--font-size-description: 1.2rem;
 	}
 
 	h1 {
-		max-width: 20ch;
+		padding: var(--padding-medium);
+	}
+
+	h1 {
+		max-width: 25ch;
 		margin-inline: auto;
 	}
 
 	.description {
-		justify-content: flex-start;
-		gap: 0.5rem;
-		padding-inline-start: 10rem;
+		justify-content: space-evenly;
+		padding-inline: var(--padding-medium);
 	}
 
 	.description.open {
-		padding-block: 4rem;
+		padding-block: var(--padding-large);
 	}
 
 	button {
