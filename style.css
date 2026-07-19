@@ -160,12 +160,12 @@ footer a:hover {
 	color: var(--color-text);
 }
 
-#persistence-of-memory .description p,
+#persistence-of-color .description p,
 #thoughts-on-interaction-of-color .description p {
 	color: var(--color-links);
 }
 
-#persistence-of-memory .description:hover p,
+#persistence-of-color .description:hover p,
 #thoughts-on-interaction-of-color .description:hover p {
 	color: var(--color-text);
 }
@@ -178,7 +178,7 @@ footer a:hover {
 	background-color: #F799BF;
 }
 
-#persistence-of-memory .description {
+#persistence-of-color .description {
 	background-color: #4E5DB3;
 }
 
@@ -200,7 +200,7 @@ footer a:hover {
 
 #untold .description:hover,
 #gossip .description:hover,
-#persistence-of-memory .description:hover,
+#persistence-of-color .description:hover,
 #cult-of-the-ugly .description:hover,
 #thoughts-on-interaction-of-color .description:hover {
 	background-color: var(--color-accent);
