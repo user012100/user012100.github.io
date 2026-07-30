@@ -12,7 +12,7 @@ A dedicated space for creative writing, whether it's poetry, lyrics, or anything
 ### [Gossip](https://user012100.github.io/links)
 Uses the Are.na API to build a gossip-themed website that transforms a curated archive into an interactive interface.
 
-### [Persistence of Memory](https://user012100.github.io/binding)
+### [Persistence of Color](https://user012100.github.io/binding)
 Curates three readings as a digital binding on a website, involving sketching in code and developing a design system.
 
 ### [Cult of the Ugly](https://user012100.github.io/spread)
